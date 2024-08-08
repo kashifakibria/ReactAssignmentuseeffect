@@ -78,6 +78,7 @@ function UserProfile({ userId }) {
 Explain how useState and useEffect are used in this component. What would happen if the userId prop changes? How does this component handle loading states and errors?
 
 ## Coding Challenge (10 points)
+openweathermap.org
 
 Create a React component called `WeatherWidget` that fetches and displays the current weather for a given city. Use the OpenWeatherMap API (or any weather API of your choice). The component should:
 
