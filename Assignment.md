@@ -89,3 +89,36 @@ Create a React component called `WeatherWidget` that fetches and displays the cu
 5. Display the temperature, weather description, and an icon representing the weather condition.
 
 Bonus: Add a simple form that allows users to change the city, and ensure the weather data updates accordingly.
+
+Note: This should the JSX.
+```
+return (
+    <div>
+      <form>
+        <input
+          type="text"
+          value={city}
+          onChange={handleCityChange}
+          placeholder="Enter city"
+        />
+      </form>
+
+      {loading && <div>Loading...</div>}
+      {error && <div>{error}</div>}
+      {weather && (
+        <div>
+          <h2>{weather.name}</h2>
+          <p>{weather.weather[0].description}</p>
+          <p>Temperature: {weather.main.temp}°C</p>
+          <img
+            src={`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
+            alt="Weather icon"
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default WeatherWidget;
+```
