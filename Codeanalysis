@@ -1,0 +1,33 @@
+//Explain how useState and useEffect are used in this component. What would happen if the userId prop changes? How does this component handle loading states and errors?
+
+
+/*USESTATE : useState is used to manage state . State like whether the data is loading or not, or whether the data is fetched or not,etc.
+const [user, setUser] = useState(null);
+const [loading, setLoading] = useState(true);
+
+user - This state holds the user data fetched from the API. And it is null because initially there will no userdata.
+setuser - After calling API sucessfully, it updates the state(user) with the fetched data.
+
+loading - This state is used to know whether the data is being fetched or not. Here True means it shows that the data is being loaded initially.
+setLoading - It is used to set the state of loading. setLoading(false) means that  it has finished loading and tells whether the data is fetched successfully or not. */
+
+
+/*USEEFFECT : useEffect is used to manage side effects. Effect like when the component mounts, when the component unmounts, when the component updates, etc.
+useEffect is used to perform side effects like fetching the data from an API. The  effect of this component depends on userId  means it will run every time the userId prop changes.
+The effect of this component will fetch the data from the API. And it will update the state(user) with the fetched data.
+
+fetchUser - to fetch the user data
+setloading(true) - It is true before fetching 
+setloading(response.data) - If the data is fetched successfully, it updates the state with the fetched data.
+setloading(false) - It is false after the fetch completes or if an error occurs
+*/
+
+
+/* IF THE USERID PROP CHANGES the useeffect should also change because it should be updated with the new userId.
+fetchUser fetches the new data i.e the new userId. */
+
+
+/* Here the Component is USERPROFILE and it displays "Loading...." when loading is true.
+ If the user is found it displays the user's name etc basically user profile or information.
+ If the user is not found it displays "User not found". */
+

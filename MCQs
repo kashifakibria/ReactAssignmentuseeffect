@@ -1,0 +1,42 @@
+1. What is the primary purpose of the useState hook in React? 
+   a) To perform side effects
+   b) To manage state in functional components 
+   c) To create class components
+   d) To handle API calls
+
+Ans: (Option b)
+
+2. In the following code snippet, what does setCount do?
+   ```javascript
+   const [count, setCount] = useState(0);
+   ```
+   a) It initializes the count state
+   b) It returns the current count value
+   c) It's a function to update the count state
+   d) It's a class method
+
+Ans: (Option c)
+
+3. What is the purpose of the empty dependency array [] in useEffect?
+   a) It means the effect will run on every render
+   b) It means the effect will never run
+   c) It means the effect will only run once, after the initial render
+   d) It's a syntax error
+
+Ans: (Option c)
+
+4. Which of the following is TRUE about useEffect?
+   a) It can only be used for API calls
+   b) It replaces lifecycle methods in class components
+   c) It can only be used once per component
+   d) It must always return a cleanup function
+
+Ans: (Option b)
+
+5. In the context of the MovieGrid component, why is useState used to store the movies?
+   a) To make the API call
+   b) To render the movie grid
+   c) To store and update the movie data, triggering re-renders when it changes
+   d) To create a class component
+
+Ans: (Option c)
